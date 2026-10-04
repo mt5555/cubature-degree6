@@ -38,6 +38,11 @@ Notes:
 * Restricted to fully symmetric rules, the minimal inside counts are larger at degrees 6–8:
   12, 15 and 16 (Papanicolopulos; Witherden–Vincent).
 
+> **Independent cross-check of degree 6.** [`degree6_alg/`](degree6_alg/README.md) re-derives the
+> degree-6 result by the algebraic critical-point method: msolve/Singular find every point where a
+> rule with all nodes inside could first appear, and none is inside. This uses no SOS or SDP, but it is
+> not formally certified, since it takes msolve's output as correct.
+
 > **Degree 8 too.** The folder [`degree8/`](degree8/README.md) proves by exact enumeration that
 > there are exactly two 15-point degree-8 rules on the triangle, both with 3 nodes outside. So
 > the minimum number of nodes for a degree-8 rule with all nodes inside is 16.

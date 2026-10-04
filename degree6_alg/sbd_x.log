@@ -1,0 +1,170 @@
+
+--------------- INPUT DATA ---------------
+#variables                      14
+#equations                      15
+#invalid equations               0
+field characteristic             0
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       1
+generate pbm files               0
+------------------------------------------
+Dimension of quotient: 12
+Staircase is not generic
+Multiplication by x8 gets outside the staircase
+Time for rational param:          0.23 (elapsed) sec /  0.23 sec (cpu)
+
+
+--------------- INPUT DATA ---------------
+#variables                      14
+#equations                      15
+#invalid equations               0
+field characteristic             0
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       1
+generate pbm files               0
+------------------------------------------
+Dimension of quotient: 12
+[12, 8], Non trivial / Trivial = 66.67%
+Density of non-trivial part 96.88%
+Time spent to generate sequence (elapsed): 0.00 sec (0.08 Gops/sec)
+Degree of the square-free part: 6
+[12, 6, 6]
+Time spent to compute eliminating polynomial (elapsed): 0.00 sec
+Elimination polynomial is not squarefree.
+Time for rational param:          0.23 (elapsed) sec /  0.22 sec (cpu)
+
+
+--------------- INPUT DATA ---------------
+#variables                      15
+#equations                      16
+#invalid equations               0
+field characteristic             0
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       1
+generate pbm files               0
+------------------------------------------
+Dimension of quotient: 12
+[12, 8], Non trivial / Trivial = 66.67%
+Density of non-trivial part 100.00%
+Time spent to generate sequence (elapsed): 0.00 sec (0.09 Gops/sec)
+Time spent to compute eliminating polynomial (elapsed): 0.00 sec
+Elimination polynomial has degree 12.
+
+Starts multi-modular computations
+{2}{4}{8}{16}[0][1][2][3][4][5][6][7][8][9][10][11][12][13][14]<0,1>[0][1][2][3][4][5][6][7][8][9][10][11][12][13][14]
+25 primes used
+Time for CRT + rational reconstruction = 0.00
+Time for rational param:          2.91 (elapsed) sec /  2.89 sec (cpu)
+
+Real root isolation starts at precision 141
+Number of real roots: 4
+Starts real root extraction.
+Elapsed time (real root extraction) = 0.00
+------------------------------------------------------------------------------------
+msolve overall time           3.37 sec (elapsed) /  3.35 sec (cpu)
+------------------------------------------------------------------------------------
+
+---------------- TIMINGS ---------------
+overall(elapsed)        0.23 sec
+overall(cpu)            0.23 sec
+select                  0.02 sec   8.0%
+symbolic prep.          0.01 sec   4.9%
+update                  0.07 sec  28.8%
+convert                 0.00 sec   1.2%
+linear algebra          0.13 sec  56.9%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                    42
+#terms in basis                 474
+#pairs reduced                 2503
+#GM criterion                191250
+#redundant elements             581
+#rows reduced                  5072
+#zero reductions               1907
+max. matrix data               1826 x 2421 (7.770%)
+max. symbolic hash table size  2^12
+max. basis hash table size     2^16
+-----------------------------------------
+
+
+Changing variable order for possibly more generic staircase:
+C5, y1, y2, y3, y4, y5, y6, y7, C0, C1, C2, C3, C4, y0
+
+---------------- TIMINGS ---------------
+overall(elapsed)        0.22 sec
+overall(cpu)            0.22 sec
+select                  0.02 sec   7.4%
+symbolic prep.          0.01 sec   4.7%
+update                  0.07 sec  32.3%
+convert                 0.00 sec   1.1%
+linear algebra          0.12 sec  54.3%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                    42
+#terms in basis                 471
+#pairs reduced                 2648
+#GM criterion                220798
+#redundant elements             627
+#rows reduced                  5356
+#zero reductions               2003
+max. matrix data               1853 x 2458 (8.211%)
+max. symbolic hash table size  2^12
+max. basis hash table size     2^16
+-----------------------------------------
+
+
+Adding a linear form with an extra variable (lowest w.r.t. monomial order)
+[coefficients of linear form are randomly chosen]
+
+---------------- TIMINGS ---------------
+overall(elapsed)        0.33 sec
+overall(cpu)            0.33 sec
+select                  0.03 sec   8.6%
+symbolic prep.          0.02 sec   5.2%
+update                  0.07 sec  19.5%
+convert                 0.00 sec   1.1%
+linear algebra          0.22 sec  65.4%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                    43
+#terms in basis                 483
+#pairs reduced                 2514
+#GM criterion                205821
+#redundant elements             603
+#rows reduced                  5083
+#zero reductions               1890
+max. matrix data               2279 x 2960 (7.676%)
+max. symbolic hash table size  2^13
+max. basis hash table size     2^16
+-----------------------------------------
+

@@ -1,0 +1,114 @@
+
+--------------- INPUT DATA ---------------
+#variables                      14
+#equations                      15
+#invalid equations               0
+field characteristic             0
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       1
+generate pbm files               0
+------------------------------------------
+Dimension of quotient: 12
+Staircase is not generic
+Multiplication by x8 gets outside the staircase
+Time for rational param:          0.25 (elapsed) sec /  0.24 sec (cpu)
+
+
+--------------- INPUT DATA ---------------
+#variables                      14
+#equations                      15
+#invalid equations               0
+field characteristic             0
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       1
+generate pbm files               0
+------------------------------------------
+Dimension of quotient: 12
+[12, 8], Non trivial / Trivial = 66.67%
+Density of non-trivial part 100.00%
+Time spent to generate sequence (elapsed): 0.00 sec (0.09 Gops/sec)
+Time spent to compute eliminating polynomial (elapsed): 0.00 sec
+Elimination polynomial has degree 12.
+
+Starts multi-modular computations
+{2}{4}{8}[0][1][2][3][4][5][6][7][8][9][10][11][12][13]{16}<0,1>[0][1][2][3][4][5][6][7][8][9][10][11][12][13]
+20 primes used
+Time for CRT + rational reconstruction = 0.00
+Time for rational param:          1.52 (elapsed) sec /  1.51 sec (cpu)
+
+Real root isolation starts at precision 138
+Number of real roots: 4
+Starts real root extraction.
+Elapsed time (real root extraction) = 0.00
+------------------------------------------------------------------------------------
+msolve overall time           1.78 sec (elapsed) /  1.75 sec (cpu)
+------------------------------------------------------------------------------------
+
+---------------- TIMINGS ---------------
+overall(elapsed)        0.25 sec
+overall(cpu)            0.24 sec
+select                  0.02 sec   7.3%
+symbolic prep.          0.01 sec   5.0%
+update                  0.06 sec  25.8%
+convert                 0.00 sec   1.2%
+linear algebra          0.15 sec  60.5%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                    42
+#terms in basis                 466
+#pairs reduced                 2563
+#GM criterion                193688
+#redundant elements             585
+#rows reduced                  5170
+#zero reductions               1952
+max. matrix data               2299 x 2566 (6.555%)
+max. symbolic hash table size  2^12
+max. basis hash table size     2^16
+-----------------------------------------
+
+
+Changing variable order for possibly more generic staircase:
+C5, y1, y2, y3, y4, y5, y6, y7, C0, C1, C2, C3, C4, y0
+
+---------------- TIMINGS ---------------
+overall(elapsed)        0.23 sec
+overall(cpu)            0.23 sec
+select                  0.02 sec   7.2%
+symbolic prep.          0.01 sec   4.2%
+update                  0.08 sec  33.2%
+convert                 0.00 sec   1.3%
+linear algebra          0.12 sec  54.0%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                    42
+#terms in basis                 474
+#pairs reduced                 2663
+#GM criterion                222122
+#redundant elements             629
+#rows reduced                  5376
+#zero reductions               2011
+max. matrix data               1996 x 2573 (7.520%)
+max. symbolic hash table size  2^12
+max. basis hash table size     2^16
+-----------------------------------------
+
