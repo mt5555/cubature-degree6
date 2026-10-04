@@ -1,0 +1,1 @@
+N=18 inside: 50 starts, exact rules (<1e-10): 0, exact with all w>0 and inside: 0; best residuals: 1.89e-02 1.89e-02 1.89e-02 1.89e-02 1.89e-02

@@ -12,7 +12,7 @@ This is a computer-assisted proof. Every step of the final certificate is checke
 rational arithmetic. Because exactness forces the nodes to be distinct (Section 1), the result
 also rules out rules with fewer than 10 distinct nodes.
 
-## Summary: minimal rules on the triangle, degrees 1–8
+## Summary: minimal rules on the triangle, degrees 1–9
 
 N = number of nodes. The *basic bound* is dim P_⌊d/2⌋. A rule is *inside* if it has positive
 weights and all nodes in the closed triangle.
@@ -27,9 +27,10 @@ weights and all nodes in the closed triangle.
 | 6 | 10 | 10 (some nodes outside) | **11** | Day & Taylor (2007), asymmetric; certified here | **this repo**: 10 inside impossible (exact SOS certificate) |
 | 7 | 10 | 12 | 12 | Gatermann (1988), 3-fold rotational symmetry | literature: improved lower bound 12 |
 | 8 | 15 | 15 (some nodes outside) | **16** | Wandzura–Xiao (2003), fully symmetric | **this repo** ([`degree8/`](degree8/README.md)): exactly two 15-point rules exist, both with 3 nodes outside |
+| 9 | 15 | ≥ 17 (open) | 17–19 (open; 19 best known) | fully symmetric 19-point rule (Lyness–Jespersen type; Wandzura–Xiao) | literature: lower bound 17, 19 minimal among fully symmetric rules; **numerical search here** ([`degree9/`](degree9/README.md)) found no 17- or 18-point rule |
 
 Notes:
-* The bold entries in degrees 6 and 8 are the results proved here. The other rows are from the
+* The bold entries in degrees 6 and 8 are the results proved here. The degree-9 entry is numerical evidence only. The other rows are from the
   literature (Cools' encyclopedia; Taylor–Wingate–Bos 2007, Table 2; Lyness–Cools survey) and
   were not re-verified in this repo, apart from the counts that agree with TWB Table 2.
 * Degree 6 is the first degree where the minimal rule can't have all its nodes inside. For

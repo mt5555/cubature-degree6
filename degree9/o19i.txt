@@ -1,0 +1,1 @@
+N=19 inside: 30 starts, exact rules (<1e-10): 15, exact with all w>0 and inside: 13; best residuals: 9.21e-12 9.74e-12 9.94e-12 1.07e-11 1.08e-11
