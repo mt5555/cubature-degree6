@@ -1,0 +1,13 @@
+  equation 0: remainder mod f is zero: True
+  equation 1: remainder mod f is zero: True
+  equation 2: remainder mod f is zero: True
+  equation 3: remainder mod f is zero: True
+  equation 4: remainder mod f is zero: True
+  equation 5: remainder mod f is zero: True
+  equation 6: remainder mod f is zero: True
+  equation 7: remainder mod f is zero: True
+  equation 8: remainder mod f is zero: True
+  equation 9: remainder mod f is zero: True
+all 10 equations vanish on the 16 parametrized points: True
+f squarefree: True ; gcd(f,q)=1: True
+number of real roots of f (exact, Sturm): 2   [1s]

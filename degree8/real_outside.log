@@ -1,0 +1,2 @@
+real root 0: y enclosure width 8.5e-13; LMI for g=y: v^T G v in [-7.574e-06, -7.574e-06]  -> certified negative: True   (whitened min eig -12.18)
+real root 1: y enclosure width 1.6e-10; LMI for g=x: v^T G v in [-7.574e-06, -7.574e-06]  -> certified negative: True   (whitened min eig -12.18)

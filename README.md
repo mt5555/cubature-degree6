@@ -12,6 +12,10 @@ This is a computer-assisted proof. Every step of the final certificate is checke
 rational arithmetic. Because exactness forces the nodes to be distinct (Section 1), the result
 also rules out rules with fewer than 10 distinct nodes.
 
+> **Degree 8 too.** The folder [`degree8/`](degree8/README.md) proves by exact enumeration that
+> there are exactly two 15-point degree-8 rules on the triangle, both with 3 nodes outside. So
+> the minimum number of nodes for a degree-8 rule with all nodes inside is 16.
+
 ## Background and prior work
 
 * **Disk.** Easwaran, Fialkow & Petrovic [EFP] proved that no 10-point degree-6 rule for the

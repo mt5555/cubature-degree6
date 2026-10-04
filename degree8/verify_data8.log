@@ -1,0 +1,3 @@
+M4 positive definite: True
+msolve input equations == nonzero rational multiples of the Hankel conditions: True
+Schur complements of M4(gL) on the P3 block == cf8 G_g (A_g PD), all g: True
