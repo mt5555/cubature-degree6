@@ -5,10 +5,45 @@ closed triangle T, integrates every polynomial of total degree ≤ 6 exactly. Th
 any real weights. Since 10 = dim P₃ is also the lower bound, the minimal number of nodes for
 a degree-6 rule with all nodes inside T is 11, the count achieved by Day & Taylor (PAMM 7, 2007).
 Section 5 certifies rigorously that an 11-point rule with all nodes strictly inside exists.
+This answers, for the triangle, the question left open in Easwaran–Fialkow–Petrovic (2006),
+who proved the corresponding impossibility for the disk (see Background).
 
 This is a computer-assisted proof. Every step of the final certificate is checked in exact
 rational arithmetic. Because exactness forces the nodes to be distinct (Section 1), the result
 also rules out rules with fewer than 10 distinct nodes.
+
+## Background and prior work
+
+* **Disk.** Easwaran, Fialkow & Petrovic [EFP] proved that no 10-point degree-6 rule for the
+  disk has all its nodes in the closed disk. They used the same Curto–Fialkow flat-extension
+  and localizing-matrix framework as Section 1 here. The disk's rotational symmetry reduces
+  their flatness conditions to a small system, which they rule out by hand estimates. Whether
+  an 11-point inside rule exists for the disk is left open there.
+* **Triangle, before this work.** [EFP, Section 5] states that for the triangle "the size of a
+  minimal inside rule of degree 6 is unknown". Rasputin [R] proved that a 10-point degree-6
+  rule with 9 nodes inside exists, and [EFP] gives three more such rules. Day & Taylor [DT]
+  found an 11-point rule with all nodes inside, and noted that 10 points had only been reached
+  with some points outside. The best fully symmetric rule with all points inside has 12 points.
+* **This work** settles the triangle case. 10 points is impossible (Sections 1–2), and 11 is
+  attained (Section 5, which also certifies Day & Taylor's published rule). The triangle has
+  no rotational symmetry to reduce the system, so the hand estimates of [EFP] are replaced by
+  an exact, computer-verified SOS certificate.
+* **Check of a prior rule.** The [EFP] Example 5.2 rule satisfies degree-6 exactness (residual
+  1.6×10⁻¹³ in our code). Its one outside node is 0.170 beyond the hypotenuse. This is
+  consistent with Section 3: every exact 10-point rule found has some node at least ≈ 0.1045
+  outside.
+
+The literature search covers work up to 2007. More recent work has not been checked.
+
+**References**
+* [EFP] C. Easwaran, L. Fialkow, S. Petrovic, *Can a minimal degree 6 cubature rule for the disk
+  have all points inside?*, J. Comput. Appl. Math. 185 (2006) 144–165, doi:10.1016/j.cam.2005.02.001.
+* [CF] R. Curto, L. Fialkow, flat extension and K-moment theorems (as cited in [EFP], refs. [7, 8]).
+* [R] Rasputin, 10-node degree-6 rule with 9 nodes in the triangle (as cited in [EFP], ref. [21]).
+* [DT] D. M. Day, M. A. Taylor, *A new 11 point degree 6 cubature formula for the triangle*,
+  PAMM 7 (2007) 1022501–1022502, doi:10.1002/pamm.200700477.
+* [TWB] M. A. Taylor, B. A. Wingate, L. P. Bos, *A cardinal function algorithm for computing
+  multivariate quadrature points*, SIAM J. Numer. Anal. 45 (2007) 193–205.
 
 ## 1. Reduction to 8 unknowns
 
@@ -32,7 +67,7 @@ Let μ = Σ wᵢ δ(xᵢ) be a 10-point rule that is exact to degree 6.
   Hank(m₆) − Hank(y₀..y₆) − Hank(y₁..y₇) for g = 1−x−y.
 
 So an inside rule implies a point y ∈ ℝ⁸ in K ∩ V, where K = {G_g ⪰ 0} and V = {h = 0}. The
-converse also holds (Curto–Fialkow flat extension theorem), but only this direction is needed here.
+converse also holds (Curto–Fialkow flat extension theorem; see [EFP, Theorem 1.2]), but only this direction is needed here.
 
 ## 2. Certificate that K ∩ V is empty
 
