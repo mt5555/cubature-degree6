@@ -189,6 +189,20 @@ inside T. It uses the Krawczyk interval-Newton test [K, Mo, N] in exact rational
 | 10 | 0.05532863648392812 | 0.88053899088976817 | 0.02355269993204220 |
 | 11 | 0.04534843557763532 | 0.30271617543513590 | 0.03594773427991421 |
 
+**A rule with more symmetry and more margin, `maxmargin11.txt`.** The max-margin rule above is
+mirror-symmetric across y = x. `cert11sym.py` certifies an **exactly** mirror-symmetric version.
+Its structure is 3 nodes on the diagonal plus 4 mirror pairs: 18 unknowns and 16 symmetric
+moment equations. Two unknowns (t₂, b₁) are fixed at exact rationals, and Krawczyk certifies the
+remaining 16×16 system with ratio 10⁻¹⁰. Over the certified box, every node is at least **0.0453**
+from the edges (Day & Taylor: 0.0233) and every weight is positive (smallest 0.016). The file
+lists the certified rule to 25 digits; its double-precision residual is 4×10⁻¹³.
+
+| | Day & Taylor (2007) | `maxmargin11.txt` |
+|---|---|---|
+| symmetry | none | mirror (x ↔ y), exact |
+| min node-to-edge distance | 0.0233 | **0.0453** |
+| min weight | 0.0190 | 0.0161 |
+
 **Day & Taylor's rule, certified.** The 11-point rule published in Day & Taylor (PAMM 7, 2007)
 is in `daytaylor11.txt`. In floating point it has residual 4×10⁻¹³, minimum edge distance 0.0233
 and minimum weight 0.019. Running `python3 cert11.py daytaylor11.npy cert11_daytaylor.pkl`
@@ -205,6 +219,7 @@ Files are in `tri/`. These checks are standalone. They need only Python with num
 * `python3 verify_data.py` (about 1 min): exact re-derivation of the problem data from the moment matrices.
 * `python3 rigcert.py` (about 3 s): exact re-check of the 16 box certificates and the main certificate.
   It uses `sosdata.pkl`, `rigbox.pkl` and `sos_num.pkl`.
+* `python3 cert11sym.py` (about 1 s): certifies the exactly mirror-symmetric rule and writes `maxmargin11.txt`.
 * `python3 cert11.py` (about 3 s): Krawczyk certification of the 11-point rule. It uses `best11_1.npy`.
   Add the arguments `daytaylor11.npy cert11_daytaylor.pkl` to certify Day & Taylor's published rule instead.
 
