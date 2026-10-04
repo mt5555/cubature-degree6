@@ -12,6 +12,31 @@ This is a computer-assisted proof. Every step of the final certificate is checke
 rational arithmetic. Because exactness forces the nodes to be distinct (Section 1), the result
 also rules out rules with fewer than 10 distinct nodes.
 
+## Summary: minimal rules on the triangle, degrees 1–8
+
+N = number of nodes. The *basic bound* is dim P_⌊d/2⌋. A rule is *inside* if it has positive
+weights and all nodes in the closed triangle.
+
+| Degree d | Basic bound | Minimal N, any rule | Minimal N, inside | Achieved by | Status |
+|---|---|---|---|---|---|
+| 1 | 1 | 1 | 1 | centroid | trivial |
+| 2 | 3 | 3 | 3 | e.g. (1/6,1/6), (2/3,1/6), (1/6,2/3) | basic bound reached |
+| 3 | 3 | 4 | 4 | an asymmetric 4-point inside rule (Cools' encyclopedia; the symmetric Strang–Fix 4-point rule has a negative weight) | literature: 3 impossible (no Gaussian rule) |
+| 4 | 6 | 6 | 6 | fully symmetric 6-point rule (Strang–Fix, Dunavant) | basic bound reached |
+| 5 | 6 | 7 | 7 | Radon (1948), fully symmetric | literature: 6 impossible (no Gaussian rule) |
+| 6 | 10 | 10 (some nodes outside) | **11** | Day & Taylor (2007), asymmetric; certified here | **this repo**: 10 inside impossible (exact SOS certificate) |
+| 7 | 10 | 12 | 12 | Gatermann (1988), 3-fold rotational symmetry | literature: improved lower bound 12 |
+| 8 | 15 | 15 (some nodes outside) | **16** | Wandzura–Xiao (2003), fully symmetric | **this repo** ([`degree8/`](degree8/README.md)): exactly two 15-point rules exist, both with 3 nodes outside |
+
+Notes:
+* The bold entries in degrees 6 and 8 are the results proved here. The other rows are from the
+  literature (Cools' encyclopedia; Taylor–Wingate–Bos 2007, Table 2; Lyness–Cools survey) and
+  were not re-verified in this repo, apart from the counts that agree with TWB Table 2.
+* Degree 6 is the first degree where the minimal rule can't have all its nodes inside. For
+  the disk, the same was proved by Easwaran–Fialkow–Petrovic (2006).
+* Restricted to fully symmetric rules, the minimal inside counts are larger at degrees 6–8:
+  12, 15 and 16 (Papanicolopulos; Witherden–Vincent).
+
 > **Degree 8 too.** The folder [`degree8/`](degree8/README.md) proves by exact enumeration that
 > there are exactly two 15-point degree-8 rules on the triangle, both with 3 nodes outside. So
 > the minimum number of nodes for a degree-8 rule with all nodes inside is 16.
