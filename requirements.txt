@@ -1,0 +1,5 @@
+numpy
+scipy
+sympy
+mpmath
+cvxpy        # only needed to rebuild the certificate from scratch (uses the Clarabel solver)
