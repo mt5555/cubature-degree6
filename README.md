@@ -116,6 +116,14 @@ inside T. It uses the Krawczyk interval-Newton test in exact rational interval a
 | 10 | 0.05532863648392812 | 0.88053899088976817 | 0.02355269993204220 |
 | 11 | 0.04534843557763532 | 0.30271617543513590 | 0.03594773427991421 |
 
+**Day & Taylor's rule, certified.** The 11-point rule published in Day & Taylor (PAMM 7, 2007)
+is in `daytaylor11.txt`. In floating point it has residual 4×10⁻¹³, minimum edge distance 0.0233
+and minimum weight 0.019. Running `python3 cert11.py daytaylor11.npy cert11_daytaylor.pkl`
+certifies it the same way. The fixed unknowns are x₃, x₅, x₆, y₆ and y₇. The Krawczyk ratio is
+8×10⁻¹¹, and the certified exact rule lies within 10⁻¹⁵ of the published values. So the
+published rule is a genuine 11-point degree-6 rule with all nodes strictly inside, and with
+the proof above it is optimal.
+
 ## 6. Reproducing
 
 Files are in `tri/`. These checks are standalone. They need only Python with numpy and sympy
@@ -125,6 +133,7 @@ Files are in `tri/`. These checks are standalone. They need only Python with num
 * `python3 rigcert.py` (about 3 s): exact re-check of the 16 box certificates and the main certificate.
   It uses `sosdata.pkl`, `rigbox.pkl` and `sos_num.pkl`.
 * `python3 cert11.py` (about 3 s): Krawczyk certification of the 11-point rule. It uses `best11_1.npy`.
+  Add the arguments `daytaylor11.npy cert11_daytaylor.pkl` to certify Day & Taylor's published rule instead.
 
 To rebuild from scratch, run `box.py` → `sosdata.py` → `sos.py` → `rigbox.py` → `rigcert.py`
 (this needs cvxpy with Clarabel). The supporting and exploratory scripts are `common.py`,

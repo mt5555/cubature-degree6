@@ -8,7 +8,7 @@ t0=time.time()
 N=11; mp.mp.dps=70
 MON=[(a,d-a) for d in range(7) for a in range(d,-1,-1)]                 # 28 monomials
 mom={ab:Fr(factorial(ab[0])*factorial(ab[1]),factorial(ab[0]+ab[1]+2)) for ab in MON}
-v=np.load('best11_1.npy')[:3*N]                                         # u = (x_1..x_11, y_1..y_11, w_1..w_11)
+import sys; v=np.load(sys.argv[1] if len(sys.argv)>1 else 'best11_1.npy')[:3*N]                                         # u = (x_1..x_11, y_1..y_11, w_1..w_11)
 def J_float(u):
     x,y,w=u[:N],u[N:2*N],u[2*N:]
     J=np.zeros((28,3*N))
@@ -99,6 +99,6 @@ posw=all(X[2*N+i].lo>0 for i in range(N))
 mind=min(min(X[i].lo,X[N+i].lo,(Iv(1)-X[i]-X[N+i]).lo/Fr(1414214,1000000)) for i in range(N))
 print("all nodes strictly inside T over the box:",inside," (min edge distance >= %.6f);  all weights > 0:"%float(mind),posw)
 print("CERTIFIED 11-POINT INSIDE RULE:",ok and inside and posw)
-pickle.dump({'center':cen,'rad':rad,'free':free,'fixed':fixed},open('cert11.pkl','wb'))
+pickle.dump({'center':cen,'rad':rad,'free':free,'fixed':fixed},open((sys.argv[2] if len(sys.argv)>2 else 'cert11.pkl'),'wb'))
 print("\n  node    x                     y                     weight (sum = 1/2)")
 for i in range(N): print(f"  {i+1:2d}  {float(cen[i]):.17f}  {float(cen[N+i]):.17f}  {float(cen[2*N+i]):.17f}")
