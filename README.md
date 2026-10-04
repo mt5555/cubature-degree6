@@ -71,6 +71,14 @@ The literature search covers work up to 2007. More recent work has not been chec
 * [R] Rasputin, 10-node degree-6 rule with 9 nodes in the triangle (as cited in [EFP], ref. [21]).
 * [DT] D. M. Day, M. A. Taylor, *A new 11 point degree 6 cubature formula for the triangle*,
   PAMM 7 (2007) 1022501–1022502, doi:10.1002/pamm.200700477.
+* [K] R. Krawczyk, *Newton-Algorithmen zur Bestimmung von Nullstellen mit Fehlerschranken*,
+  Computing 4 (1969) 187–201. This introduces the Krawczyk operator used in Section 5 (`cert11.py`).
+* [Mo] R. E. Moore, *A test for existence of solutions to nonlinear systems*, SIAM J. Numer. Anal.
+  14 (1977) 611–615. It proves the existence test: K(X) ⊆ X implies a zero in X.
+* [N] A. Neumaier, *Interval Methods for Systems of Equations*, Cambridge University Press, 1990.
+  It covers uniqueness: K(X) ⊂ int X gives a unique zero.
+* [Ru] S. M. Rump, *Verification methods: Rigorous results using floating-point arithmetic*,
+  Acta Numerica 19 (2010) 287–449.
 * [TWB] M. A. Taylor, B. A. Wingate, L. P. Bos, *A cardinal function algorithm for computing
   multivariate quadrature points*, SIAM J. Numer. Anal. 45 (2007) 193–205.
 
@@ -153,7 +161,7 @@ a 15-dimensional null space onto any exact Gram matrix S₀.
 ## 5. Certified 11-point rule with all nodes inside (existence)
 
 `cert11.py` certifies that a genuine 11-point degree-6 rule exists with every node strictly
-inside T. It uses the Krawczyk interval-Newton test in exact rational interval arithmetic.
+inside T. It uses the Krawczyk interval-Newton test [K, Mo, N] in exact rational interval arithmetic.
 
 * There are 33 unknowns and 28 equations. Pivoted QR picks 5 unknowns to fix (x₃, x₄, x₆, y₃,
   y₁₁), set to exact dyadic rationals. Newton's method in mpmath (70 digits) solves for the other
